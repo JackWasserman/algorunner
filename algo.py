@@ -30,18 +30,18 @@ default_stop = .95
 risk = 0.001
 
 
-# def get_1000m_history_data(symbols):
-#     print('Getting historical data...')
-#     minute_history = {}
-#     c = 0
-#     for symbol in symbols:
-#         minute_history[symbol] = api.polygon.historic_agg(
-#             size="minute", symbol=symbol, limit=1000
-#         ).df
-#         c += 1
-#         print('{}/{}'.format(c, len(symbols)))
-#     print('Success.')
-#     return minute_history
+def get_1000m_history_data(symbols):
+    print('Getting historical data...')
+    minute_history = {}
+    c = 0
+    for symbol in symbols:
+        minute_history[symbol] = api.polygon.historic_agg(
+            size="minute", symbol=symbol, limit=1000
+        ).df
+        c += 1
+        print('{}/{}'.format(c, len(symbols)))
+    print('Success.')
+    return minute_history
 
 
 def get_tickers():
